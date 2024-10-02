@@ -12,6 +12,7 @@ import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
 	return (
@@ -25,13 +26,19 @@ const Sidebar = () => {
 				<ul>
 					<p className={styles.title}>MAIN</p>
 					<li>
-						<Dashboard className={styles.icon} />
-						<span>Dashboard</span>
+						<NavLink to="/" className={styles.link}>
+							<Dashboard className={styles.icon} />
+							<span>Dashboard</span>
+						</NavLink>
 					</li>
 					<p className={styles.title}>LISTS</p>
 					<li>
-						<PersonOutlineOutlinedIcon className={styles.icon} />
-						<span>Users</span>
+						<NavLink to="/users" className={styles.link}>
+							<PersonOutlineOutlinedIcon
+								className={styles.icon}
+							/>
+							<span>Users</span>
+						</NavLink>
 					</li>
 					<li>
 						<StoreRoundedIcon className={styles.icon} />
