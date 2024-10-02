@@ -1,0 +1,87 @@
+.featured {
+	// flex: 2;
+	flex: 2 1 240px; /* Allow the .featured div to shrink and grow based on available space */
+	min-width: 210px; /* Set a minimum width */
+	// min-width: 285px;
+	// max-height: 385px;
+
+	-webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+	box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+	padding: 10px;
+
+	.top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: gray;
+
+		.title {
+			font-size: 15px;
+			font-weight: bold;
+			margin-bottom: 9px;
+		}
+	}
+
+	.bottom {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 15px;
+		color: gray;
+
+		.featuredChart {
+			width: 100px;
+			height: 100px;
+		}
+
+		.title {
+			font-weight: 500;
+		}
+
+		.amount {
+			font-size: 30px;
+		}
+
+		.desc {
+			font-weight: 300;
+			font-size: 12px;
+			// text-align: center;
+		}
+
+		.summary {
+			width: 100%;
+			display: flex;
+			align-items: last baseline;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 15px;
+
+			.item {
+				text-align: center;
+
+				.itemTitle {
+					font-size: 14px;
+					color: gray;
+				}
+
+				.itemResult {
+					display: flex;
+					align-items: center;
+					margin-top: 10px;
+					font-size: 14px;
+
+					&.positive {
+						color: green;
+					}
+
+					&.negative {
+						color: crimson;
+					}
+				}
+			}
+		}
+	}
+}

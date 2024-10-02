@@ -16,8 +16,10 @@
     "@mui/material": "^6.1.1",
     "classnames": "^2.5.1",
     "react": "^18.3.1",
+    "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
+    "recharts": "^2.12.7",
     "sass": "^1.79.4"
   },
   "devDependencies": {
