@@ -23,13 +23,13 @@
 			padding: 20px;
 
 			/* Ensure the table container has scrollable content */
-			overflow-x: auto;
-			max-width: 100%;
+			// overflow-x: auto;
+			// max-width: 100%;
 
 			-webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
 			box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
 
-			\ .tableTitle {
+			.tableTitle {
 				font-size: 16px;
 				font-weight: 500;
 				color: gray;
