@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper";
 import { userRows, userColumns } from "../../constants/datatable-src";
 import { Link } from "react-router-dom";
 
-const DataTable = () => {
+const DataTable = ({ title }) => {
 	const actionColumn = [
 		{
 			field: "action",
@@ -30,6 +30,16 @@ const DataTable = () => {
 
 	return (
 		<div className="datatable">
+			<div className="datatableTitle">
+				<h5>All {title}</h5>
+				<Link
+					to={`/${title}/new`}
+					style={{ textDecoration: "none" }}
+					className="link"
+				>
+					Add New
+				</Link>
+			</div>
 			<Paper sx={{ height: "100%", width: "100%" }}>
 				<DataGrid
 					className="datagrid"

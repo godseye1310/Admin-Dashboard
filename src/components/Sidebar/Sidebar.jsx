@@ -12,38 +12,54 @@ import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = () => {
 	return (
 		<div className={styles.sidebar}>
 			<div className={styles.top}>
-				<span className={styles.logo}>JSXAdmin</span>
+				<Link to="/" style={{ textDecoration: "none" }}>
+					<span className={styles.logo}>JSXAdmin</span>
+				</Link>
 			</div>
 			<hr />
 
 			<nav className={styles.center}>
 				<ul>
 					<p className={styles.title}>MAIN</p>
-					<li>
-						<NavLink to="/" className={styles.link}>
+					<NavLink
+						to="/"
+						className={styles.link}
+						style={{ textDecoration: "none" }}
+					>
+						<li>
 							<Dashboard className={styles.icon} />
 							<span>Dashboard</span>
-						</NavLink>
-					</li>
+						</li>
+					</NavLink>
 					<p className={styles.title}>LISTS</p>
-					<li>
-						<NavLink to="/users" className={styles.link}>
+					<NavLink
+						to="/users"
+						style={{ textDecoration: "none" }}
+						className={styles.link}
+					>
+						<li>
 							<PersonOutlineOutlinedIcon
 								className={styles.icon}
 							/>
 							<span>Users</span>
-						</NavLink>
-					</li>
-					<li>
-						<StoreRoundedIcon className={styles.icon} />
-						<span>Products</span>
-					</li>
+						</li>
+					</NavLink>
+					<NavLink
+						to="/products"
+						style={{ textDecoration: "none" }}
+						className={styles.link}
+					>
+						<li>
+							<StoreRoundedIcon className={styles.icon} />
+							<span>Products</span>
+						</li>
+					</NavLink>
 					<li>
 						<CreditCardIcon className={styles.icon} />
 						<span>Orders</span>
