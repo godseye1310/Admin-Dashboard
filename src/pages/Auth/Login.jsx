@@ -1,7 +1,7 @@
 // import styles from './Login.module.scss'
 
 const Login = () => {
-	return <div>Login</div>;
+	return <div className="login">Login</div>;
 };
 
 export default Login;

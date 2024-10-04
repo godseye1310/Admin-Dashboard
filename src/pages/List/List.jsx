@@ -1,13 +1,13 @@
 import DataTable from "../../components/DataTable/DataTable";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import styles from "./List.module.scss";
+import "./List.scss";
 
 const List = ({ title }) => {
 	return (
-		<div className={styles.list}>
+		<div className="list">
 			<Sidebar />
-			<div className={styles.listContainer}>
+			<div className="listContainer">
 				<Navbar />
 				<DataTable title={title} />
 			</div>

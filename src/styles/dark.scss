@@ -1,0 +1,115 @@
+.app.dark {
+	background-color: #111 !important;
+	color: rgb(156, 156, 156);
+
+	.chartGrid {
+		stroke: rgba(228, 228, 228, 0.219);
+	}
+
+	.muiTable {
+		background-color: #111;
+
+		.tableCell {
+			color: gray;
+		}
+	}
+
+	.navbar {
+		color: #999;
+		background-color: #111;
+		border-color: #333;
+
+		.search {
+			border-color: gray;
+
+			input {
+				&::placeholder {
+					color: #999;
+				}
+			}
+		}
+	}
+
+	.sidebar {
+		background-color: #111;
+		border-color: #333;
+
+		.top {
+			.logo {
+				color: #999;
+			}
+		}
+		hr {
+			border-color: #333;
+		}
+
+		ul {
+			li {
+				&:hover {
+					background-color: #333;
+				}
+
+				.icon {
+					color: #999;
+				}
+			}
+		}
+	}
+
+	.listContainer {
+		background-color: #111;
+		.datatable {
+			.datagrid {
+				color: gray !important;
+				background-color: #111;
+				border: none;
+
+				div {
+					background-color: transparent;
+
+					color: gray;
+
+					button,
+					svg {
+						color: gray !important;
+					}
+				}
+
+				.cellStatus {
+					&.Active {
+						color: green;
+						background-color: rgba(0, 128, 0, 0.151);
+					}
+					&.Pending {
+						color: goldenrod;
+						background-color: rgba(189, 189, 3, 0.103);
+					}
+
+					&.Cancel {
+						color: crimson;
+						background-color: rgba(220, 20, 60, 0.053);
+					}
+				}
+
+				input[type="checkbox"] {
+					border: 1px solid whitesmoke !important;
+					outline: none;
+				}
+
+				.viewButton,
+				.deleteButton {
+					color: gray;
+					// border: none;
+				}
+			}
+		}
+	}
+
+	input {
+		background-color: transparent;
+
+		&::placeholder {
+			color: rgba(211, 211, 211, 0.35);
+		}
+	}
+}

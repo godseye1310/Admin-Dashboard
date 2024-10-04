@@ -1,7 +1,7 @@
 import { DriveFolderUpload } from "@mui/icons-material";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import styles from "./New.module.scss";
+import "./New.scss";
 import { useState } from "react";
 
 const New = ({ inputs, title }) => {
@@ -9,15 +9,15 @@ const New = ({ inputs, title }) => {
 	console.log(file);
 
 	return (
-		<div className={styles.new}>
+		<div className="new">
 			<Sidebar />
-			<div className={styles.newContainer}>
+			<div className="newContainer">
 				<Navbar />
-				<div className={styles.top}>
-					<h1 className={styles.title}>{title}</h1>
+				<div className="top">
+					<h1 className="title">{title}</h1>
 				</div>
-				<div className={styles.bottom}>
-					<div className={styles.left}>
+				<div className="bottom">
+					<div className="left">
 						<img
 							src={
 								file
@@ -27,14 +27,12 @@ const New = ({ inputs, title }) => {
 							alt="add"
 						/>
 					</div>
-					<div className={styles.right}>
+					<div className="right">
 						<form>
-							<div className={styles.formInput}>
+							<div className="formInput">
 								<label htmlFor="file">
 									Image:{" "}
-									<DriveFolderUpload
-										className={styles.icon}
-									/>
+									<DriveFolderUpload className="icon" />
 								</label>
 								<input
 									type="file"
@@ -45,10 +43,7 @@ const New = ({ inputs, title }) => {
 								/>
 							</div>
 							{inputs.map((input) => (
-								<div
-									key={input.id}
-									className={styles.formInput}
-								>
+								<div key={input.id} className="formInput">
 									<label htmlFor="">{input.label}</label>
 									<input
 										type={input.type}
@@ -58,7 +53,7 @@ const New = ({ inputs, title }) => {
 								</div>
 							))}
 
-							<div className={styles.btn}>
+							<div className="btn">
 								<button type="submit">Send</button>
 							</div>
 						</form>

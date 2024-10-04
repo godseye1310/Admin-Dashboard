@@ -2,68 +2,58 @@ import Chart from "../../components/Charts/Chart";
 import Tables from "../../components/Tables/Tables";
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import styles from "./Single.module.scss";
+import "./Single.scss";
 
 const Single = () => {
 	return (
-		<div className={styles.single}>
+		<div className="single">
 			<Sidebar />
-			<div className={styles.singleContainer}>
+			<div className="singleContainer">
 				<Navbar />
 
-				<div className={styles.top}>
-					<div className={styles.left}>
-						<button className={styles.editButton}>Edit</button>
-						<h1 className={styles.title}>Information</h1>
-						<div className={styles.item}>
+				<div className="top">
+					<div className="left">
+						<button className="editButton">Edit</button>
+						<h1 className="title">Information</h1>
+						<div className="item">
 							<img
 								src="https://s4.anilist.co/file/anilistcdn/character/large/b162248-57Xgk6EmwKRQ.png"
 								alt=""
-								className={styles.itemImg}
+								className="itemImg"
 							/>
-							<div className={styles.details}>
-								<h1 className={styles.itemTitle}>Jane Delta</h1>
-								<div className={styles.detailItem}>
-									<span className={styles.itemKey}>
-										Email:
-									</span>
-									<span className={styles.itemValue}>
+							<div className="details">
+								<h1 className="itemTitle">Jane Delta</h1>
+								<div className="detailItem">
+									<span className="itemKey">Email:</span>
+									<span className="itemValue">
 										deltadoggo@gmail.com
 									</span>
 								</div>
-								<div className={styles.detailItem}>
-									<span className={styles.itemKey}>
-										Phone:
-									</span>
-									<span className={styles.itemValue}>
+								<div className="detailItem">
+									<span className="itemKey">Phone:</span>
+									<span className="itemValue">
 										+1 369 45 69
 									</span>
 								</div>
-								<div className={styles.detailItem}>
-									<span className={styles.itemKey}>
-										Address:
-									</span>
-									<span className={styles.itemValue}>
+								<div className="detailItem">
+									<span className="itemKey">Address:</span>
+									<span className="itemValue">
 										Elton St. 234 Garden Shd. NewYork
 									</span>
 								</div>
-								<div className={styles.detailItem}>
-									<span className={styles.itemKey}>
-										Country:
-									</span>
-									<span className={styles.itemValue}>
-										Midgar US
-									</span>
+								<div className="detailItem">
+									<span className="itemKey">Country:</span>
+									<span className="itemValue">Midgar US</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className={styles.right}>
+					<div className="right">
 						<Chart title="User Spending (Last Six Months)" />
 					</div>
 				</div>
-				<div className={styles.bottom}>
-					<h1 className={styles.title}>Last Tranccations</h1>
+				<div className="bottom">
+					<h1 className="title">Last Tranccations</h1>
 					<Tables />
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-import styles from "./Widget.module.scss";
+import "./Widget.scss";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 // import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
@@ -18,7 +18,7 @@ const Widget = ({ type }) => {
 				link: "See all Users",
 				icon: (
 					<PersonOutlinedIcon
-						className={styles.icon}
+						className="icon"
 						style={{
 							color: "crimson",
 							backgroundColor: "rgba(255, 0, 0, 0.2)",
@@ -34,7 +34,7 @@ const Widget = ({ type }) => {
 				link: "View all Orders",
 				icon: (
 					<ShoppingCartOutlinedIcon
-						className={styles.icon}
+						className="icon"
 						style={{
 							backgroundColor: "rgba(218, 165, 32, 0.2)",
 							color: "goldenrod",
@@ -50,7 +50,7 @@ const Widget = ({ type }) => {
 				link: "View Net earnings",
 				icon: (
 					<MonetizationOnOutlinedIcon
-						className={styles.icon}
+						className="icon"
 						style={{
 							backgroundColor: "rgba(0, 128, 0, 0.2)",
 							color: "green",
@@ -66,7 +66,7 @@ const Widget = ({ type }) => {
 				link: "See details",
 				icon: (
 					<AccountBalanceWalletOutlinedIcon
-						className={styles.icon}
+						className="icon"
 						style={{
 							backgroundColor: "rgba(128, 0, 128, 0.2)",
 							color: "purple",
@@ -81,16 +81,16 @@ const Widget = ({ type }) => {
 	}
 
 	return (
-		<div className={styles.widget}>
-			<div className={styles.left}>
-				<span className={styles.title}>{data.title}</span>
-				<span className={styles.counter}>
+		<div className="widget">
+			<div className="left">
+				<span className="title">{data.title}</span>
+				<span className="counter">
 					{data.isMoney && "$"} {amount}
 				</span>
-				<span className={styles.link}>{data.link}</span>
+				<span className="link">{data.link}</span>
 			</div>
-			<div className={styles.right}>
-				<div className={`${styles.percentage} ${styles.positive}`}>
+			<div className="right">
+				<div className={`percentage positive`}>
 					<KeyboardArrowUpRoundedIcon />
 					{diff}%
 				</div>

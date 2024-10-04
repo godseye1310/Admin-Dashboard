@@ -1,4 +1,4 @@
-import styles from "./Chart.module.scss";
+import "./Chart.scss";
 import {
 	AreaChart,
 	Area,
@@ -19,8 +19,8 @@ const Chart = ({ title }) => {
 		{ name: "June", Total: 1700 },
 	];
 	return (
-		<div className={styles.chart}>
-			<div className={styles.title}>{title}</div>
+		<div className="chart">
+			<div className="title">{title}</div>
 			<ResponsiveContainer width="100%" height="100%" minHeight={330}>
 				<AreaChart
 					width={730}
@@ -46,7 +46,7 @@ const Chart = ({ title }) => {
 					<YAxis stroke="gray" fontSize={13} />
 					<CartesianGrid
 						strokeDasharray="3 3"
-						className={styles.chartGrid}
+						className="chartGrid"
 					/>
 					<Tooltip />
 					<Area

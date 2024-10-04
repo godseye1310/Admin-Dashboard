@@ -140,8 +140,8 @@ export const userRows = [
 //     width: 230,
 //     renderCell: (params) => {
 //       return (
-//         <div className={styles.cellWithImg}> {/* Use styles here */}
-//           <img className={styles.cellImg} src={params.row.img} alt="avatar" /> {/* Use styles here */}
+//         <div className=cellWithImg}> {/* Use styles here */}
+//           <img className=cellImg} src={params.row.img} alt="avatar" /> {/* Use styles here */}
 //           {params.row.username}
 //         </div>
 //       );
@@ -163,7 +163,7 @@ export const userRows = [
 //     width: 160,
 //     renderCell: (params) => {
 //       return (
-//         <div className={`${styles.cellWithStatus} ${styles[params.row.status]}`}> {/* Use dynamic class with styles */}
+//         <div className={`$cellWithStatus} ${styles[params.row.status]}`}> {/* Use dynamic class with styles */}
 //           {params.row.status}
 //         </div>
 //       );

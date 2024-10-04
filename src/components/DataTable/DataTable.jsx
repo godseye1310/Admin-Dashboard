@@ -3,14 +3,20 @@ import { DataGrid } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
 import { userRows, userColumns } from "../../constants/datatable-src";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const DataTable = ({ title }) => {
+	const [data, setData] = useState(userRows);
+
+	const handleDelete = (id) => {
+		setData(data.filter((item) => item.id !== id));
+	};
 	const actionColumn = [
 		{
 			field: "action",
 			headerName: "Action",
 			width: 200,
-			renderCell: () => {
+			renderCell: (params) => {
 				return (
 					<div className="cellAction">
 						<Link
@@ -19,7 +25,12 @@ const DataTable = ({ title }) => {
 						>
 							<div className="viewButton">View</div>
 						</Link>
-						<div className="deleteButton">Delete</div>
+						<div
+							className="deleteButton"
+							onClick={() => handleDelete(params.row.id)}
+						>
+							Delete
+						</div>
 					</div>
 				);
 			},
@@ -43,7 +54,7 @@ const DataTable = ({ title }) => {
 			<Paper sx={{ height: "100%", width: "100%" }}>
 				<DataGrid
 					className="datagrid"
-					rows={userRows}
+					rows={data}
 					columns={userColumns.concat(actionColumn)}
 					initialState={{ pagination: { paginationModel } }}
 					pageSizeOptions={[5, 10, 15]}

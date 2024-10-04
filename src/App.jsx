@@ -7,10 +7,13 @@ import List from "./pages/List/List";
 import Single from "./pages/Single/Single";
 import New from "./pages/New/New";
 import { productInputs, userInputs } from "./constants/form-src";
+import "./styles/dark.scss";
+import useTheme from "./context/theme-context";
 
 function App() {
+	const { darkMode } = useTheme();
 	return (
-		<>
+		<div className={darkMode ? "app dark" : "app"}>
 			<BrowserRouter>
 				<Routes>
 					<Route path="/">
@@ -45,7 +48,7 @@ function App() {
 					</Route>
 				</Routes>
 			</BrowserRouter>
-		</>
+		</div>
 	);
 }
 

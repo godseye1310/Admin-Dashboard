@@ -1,4 +1,4 @@
-import styles from "./Navbar.module.scss";
+import "./Navbar.scss";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -6,12 +6,14 @@ import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import useTheme from "../../context/theme-context";
 
 const Navbar = () => {
+	const { dispatch } = useTheme();
 	return (
-		<nav className={styles.navbar}>
-			<div className={styles.wrapper}>
-				<div className={styles.search}>
+		<nav className="navbar">
+			<div className="wrapper">
+				<div className="search">
 					<input
 						type="text"
 						name="search"
@@ -21,38 +23,37 @@ const Navbar = () => {
 					<SearchRoundedIcon />
 				</div>
 
-				<ul className={styles.items}>
-					<li className={styles.item}>
-						<LanguageOutlinedIcon className={styles.icon} />
+				<ul className="items">
+					<li className="item">
+						<LanguageOutlinedIcon className="icon" />
 						English
 					</li>
-					<li className={styles.item}>
-						<DarkModeOutlinedIcon className={styles.icon} />
-					</li>
-					<li className={styles.item}>
-						<FullscreenExitOutlinedIcon className={styles.icon} />
-					</li>
-					<li className={styles.item}>
-						<NotificationsNoneOutlinedIcon
-							className={styles.icon}
+					<li className="item">
+						<DarkModeOutlinedIcon
+							className="icon theme"
+							onClick={() => dispatch({ type: "TOGGLE" })}
 						/>
-						<div className={styles.counter}>2</div>
 					</li>
-					<li className={styles.item}>
-						<ChatBubbleOutlineOutlinedIcon
-							className={styles.icon}
-						/>
-						<div className={styles.counter}>3</div>
+					<li className="item">
+						<FullscreenExitOutlinedIcon className="icon" />
 					</li>
-					<li className={styles.item}>
-						<ListOutlinedIcon className={styles.icon} />
+					<li className="item">
+						<NotificationsNoneOutlinedIcon className="icon" />
+						<div className="counter">2</div>
+					</li>
+					<li className="item">
+						<ChatBubbleOutlineOutlinedIcon className="icon" />
+						<div className="counter">3</div>
+					</li>
+					<li className="item">
+						<ListOutlinedIcon className="icon" />
 					</li>
 
 					<li>
 						<img
 							src="https://s4.anilist.co/file/anilistcdn/user/avatar/large/b6489262-l9VwntAmYHM1.png"
 							alt="Avatar"
-							className={styles.avatar}
+							className="avatar"
 						/>
 					</li>
 				</ul>

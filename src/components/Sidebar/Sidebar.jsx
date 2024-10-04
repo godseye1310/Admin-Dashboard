@@ -1,5 +1,5 @@
 // import { Dashboard } from "@mui/icons-material";
-import styles from "./Sidebar.module.scss";
+import "./Sidebar.scss";
 import Dashboard from "@mui/icons-material/Dashboard";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import StoreRoundedIcon from "@mui/icons-material/StoreRounded";
@@ -13,102 +13,104 @@ import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import { Link, NavLink } from "react-router-dom";
+import useTheme from "../../context/theme-context";
 
 const Sidebar = () => {
+	const { dispatch } = useTheme();
 	return (
-		<div className={styles.sidebar}>
-			<div className={styles.top}>
+		<div className="sidebar">
+			<div className="top">
 				<Link to="/" style={{ textDecoration: "none" }}>
-					<span className={styles.logo}>JSXAdmin</span>
+					<span className="logo">JSXAdmin</span>
 				</Link>
 			</div>
 			<hr />
 
-			<nav className={styles.center}>
+			<nav className="center">
 				<ul>
-					<p className={styles.title}>MAIN</p>
+					<p className="title">MAIN</p>
 					<NavLink
 						to="/"
-						className={styles.link}
+						className="link"
 						style={{ textDecoration: "none" }}
 					>
 						<li>
-							<Dashboard className={styles.icon} />
+							<Dashboard className="icon" />
 							<span>Dashboard</span>
 						</li>
 					</NavLink>
-					<p className={styles.title}>LISTS</p>
+					<p className="title">LISTS</p>
 					<NavLink
 						to="/users"
 						style={{ textDecoration: "none" }}
-						className={styles.link}
+						className="link"
 					>
 						<li>
-							<PersonOutlineOutlinedIcon
-								className={styles.icon}
-							/>
+							<PersonOutlineOutlinedIcon className="icon" />
 							<span>Users</span>
 						</li>
 					</NavLink>
 					<NavLink
 						to="/products"
 						style={{ textDecoration: "none" }}
-						className={styles.link}
+						className="link"
 					>
 						<li>
-							<StoreRoundedIcon className={styles.icon} />
+							<StoreRoundedIcon className="icon" />
 							<span>Products</span>
 						</li>
 					</NavLink>
 					<li>
-						<CreditCardIcon className={styles.icon} />
+						<CreditCardIcon className="icon" />
 						<span>Orders</span>
 					</li>
 					<li>
-						<LocalShippingIcon className={styles.icon} />
+						<LocalShippingIcon className="icon" />
 						<span>Deleviry</span>
 					</li>
-					<p className={styles.title}>USEFUL</p>
+					<p className="title">USEFUL</p>
 					<li>
-						<InsertChartIcon className={styles.icon} />
+						<InsertChartIcon className="icon" />
 						<span>Stats</span>
 					</li>
 					<li>
-						<NotificationsNoneOutlinedIcon
-							className={styles.icon}
-						/>
+						<NotificationsNoneOutlinedIcon className="icon" />
 						<span>Notification</span>
 					</li>
-					<p className={styles.title}>SERVICE</p>
+					<p className="title">SERVICE</p>
 					<li>
-						<SettingsSystemDaydreamOutlinedIcon
-							className={styles.icon}
-						/>
+						<SettingsSystemDaydreamOutlinedIcon className="icon" />
 						<span>System Health</span>
 					</li>
 					<li>
-						<PsychologyOutlinedIcon className={styles.icon} />
+						<PsychologyOutlinedIcon className="icon" />
 						<span>Logs</span>
 					</li>
-					<p className={styles.title}>USER</p>
+					<p className="title">USER</p>
 					<li>
-						<SettingsApplicationsIcon className={styles.icon} />
+						<SettingsApplicationsIcon className="icon" />
 						<span>Settings</span>
 					</li>
 					<li>
-						<AccountCircleRoundedIcon className={styles.icon} />
+						<AccountCircleRoundedIcon className="icon" />
 						<span>Profile</span>
 					</li>
 					<li>
-						<ExitToAppIcon className={styles.icon} />
+						<ExitToAppIcon className="icon" />
 						<span>Logout</span>
 					</li>
 				</ul>
 			</nav>
-			<div className={styles.bottom}>
-				<div className={styles.themeOptions}></div>
-				<div className={styles.themeOptions}></div>
-				{/* <div className={styles.themeOptions}></div> */}
+			<div className="bottom">
+				<div
+					className="themeOptions"
+					onClick={() => dispatch({ type: "LIGHT" })}
+				></div>
+				<div
+					className="themeOptions"
+					onClick={() => dispatch({ type: "DARK" })}
+				></div>
+				{/* <div className=themeOptions}></div> */}
 			</div>
 		</div>
 	);
